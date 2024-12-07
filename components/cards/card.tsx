@@ -18,7 +18,7 @@ type CardOne = {
     "bgColor"?: string
 }
 
-export default function CardOne({ percentage, product, heading, newPrice, oldPrice, starColor, reviews, bgColor }: CardOne) {
+export default function CardOne({ percentage, product, heading, newPrice, oldPrice, starColor, reviews }: CardOne) {
     return (
 
         <div className='m-2'>
@@ -233,12 +233,12 @@ export function CardThree({ image, heading, newPrice, starColor, reviews, bgColo
 
 type Category = {
     para: string,
-    iconName: React.ReactNode;
+    iconName?: React.ReactNode;
 }
 
 
 export function Category({ para, iconName }: Category) {
-    const [icon, setIcon] = useState(iconName)
+    const [icon] = useState(iconName)
     return (
         <>
             <div className='cursor-pointer w-full h-[145px] border-[1px] border-[#ccc] rounded-[4px] flex items-center justify-center hover:text-white hover:bg-primary'>
